@@ -1,0 +1,22 @@
+<!-- Prisma: the game page, a 960x720 canvas and one module script. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prisma — Crystal Breaker</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #04050c; }
+  #game {
+    position: fixed; inset: 0; margin: auto; display: block;
+    width: 100%; height: 100%; object-fit: contain; touch-action: none; cursor: crosshair;
+  }
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<canvas id="game" width="960" height="720" aria-label="Prisma: keep the pulse alive with the paddle and shatter every crystal to finish the sector"></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
